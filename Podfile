@@ -7,8 +7,9 @@ target 'Waterfall' do
 
   # Pods for Waterfall
 
-  pod 'StitchCore', '<= 4.0.0'
+  pod 'StitchCore'
   pod 'StitchLocalMongoDBService', '~> 4.0.0'
+  pod 'StitchSDK', '~> 4.0.5'
 
   target 'WaterfallTests' do
     inherit! :search_paths

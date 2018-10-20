@@ -8,8 +8,8 @@
 
 import UIKit
 //import MongoSwiftMobile
-import MongoSwift
-import stitch-sdk
+//import MongoSwift
+//import stitch-sdk
 
 class Task{
     
