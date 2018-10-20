@@ -13,10 +13,14 @@ class AddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func CloseAddTask(_ sender: Any) {
+        self.view.removeFromSuperview()
+    }
+    
     /*
     // MARK: - Navigation
 

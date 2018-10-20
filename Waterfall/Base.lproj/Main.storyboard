@@ -102,6 +102,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CloseAddTask:" destination="GTB-8H-3o8" eventType="touchUpInside" id="XLQ-DV-SEe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
