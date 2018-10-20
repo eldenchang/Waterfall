@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90FD330F217B6CCB002EF13A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */; };
 		D414244B217AD7A400DACFF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414244A217AD7A400DACFF3 /* AppDelegate.swift */; };
 		D4142450217AD7A400DACFF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D414244E217AD7A400DACFF3 /* Main.storyboard */; };
 		D4142452217AD7A600DACFF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4142451217AD7A600DACFF3 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		D4142447217AD7A400DACFF3 /* Waterfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waterfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414244A217AD7A400DACFF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D414244F217AD7A400DACFF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				D4142478217ADA3600DACFF3 /* ViewControllers */,
 				D414244A217AD7A400DACFF3 /* AppDelegate.swift */,
 				D414244E217AD7A400DACFF3 /* Main.storyboard */,
+				90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */,
 				D4142451217AD7A600DACFF3 /* Assets.xcassets */,
 				D4142453217AD7A600DACFF3 /* LaunchScreen.storyboard */,
 				D4142456217AD7A600DACFF3 /* Info.plist */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D414247E217ADB5100DACFF3 /* TasksViewController.swift in Sources */,
+				90FD330F217B6CCB002EF13A /* AddTaskViewController.swift in Sources */,
 				D414247A217ADAD400DACFF3 /* TaskCell.swift in Sources */,
 				D414244B217AD7A400DACFF3 /* AppDelegate.swift in Sources */,
 			);

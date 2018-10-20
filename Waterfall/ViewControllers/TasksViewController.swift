@@ -41,6 +41,13 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
         return cell;
     }
     
+    @IBAction func showAddTask(_ sender: AnyObject) {
+        let addTaskVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskWindow") as! AddTaskViewController
+        self.addChild(addTaskVC)
+        addTaskVC.view.frame = self.view.frame
+        self.view.addSubview(addTaskVC.view)
+        addTaskVC.didMove(toParent: self)
+    }
     
     
  
