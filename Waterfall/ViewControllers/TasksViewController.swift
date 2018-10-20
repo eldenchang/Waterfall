@@ -12,7 +12,7 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
 
 
     @IBOutlet weak var tableView: UITableView!
-    var tasks = ["Do Laundry", "Pick up fruits", "Study for exam"]
+    var tasks = ["Do Laundry", "Pick up fruits", "Study for exam"] // Example tasks
     
     override func viewDidLoad() {
         super.viewDidLoad()
