@@ -12,7 +12,9 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
 
 
     @IBOutlet weak var tableView: UITableView!
-    var tasks = ["Do Laundry", "Pick up fruits", "Study for exam"] // Example tasks
+//   let t1 = Task(TaskText: "Eggs", dueDate: NSDate())
+//   let t2 = Task(TaskText: "Pizza", dueDate: NSDate())
+    var tasks : [Task] = [Task(TaskText: "Eggs", dueDate: NSDate())] // Example tasks
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +36,14 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         let task = tasks[indexPath.row]
         var taskFontSize = 20.0; // var for font size of the task text
-        cell.taskLabel.text = task;
+        cell.taskLabel.text = task.TaskText;
         cell.taskLabel.font = UIFont(name:"AppleSDGothicNeo-Medium", size: CGFloat(taskFontSize));
-        //self.myTableView.separatorColor = [UIColor clearColor];
-        //self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         return cell;
     }
     
     @IBAction func showAddTask(_ sender: AnyObject) {
         let addTaskVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskWindow") as! AddTaskViewController
+        // addTaskVC.previousVC = self
         self.addChild(addTaskVC)
         addTaskVC.view.frame = self.view.frame
         self.view.addSubview(addTaskVC.view)

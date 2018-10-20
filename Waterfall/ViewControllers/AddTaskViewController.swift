@@ -4,11 +4,15 @@
 //
 //  Created by Qifan Chang on 10/20/18.
 //  Copyright © 2018 boilermake6. All rights reserved.
-//
 
 import UIKit
 
 class AddTaskViewController: UIViewController {
+   
+   // var previousVC = TasksViewController()
+   
+   @IBOutlet weak var taskText: UITextField!
+   @IBOutlet weak var dueDateText: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,13 +22,25 @@ class AddTaskViewController: UIViewController {
         self.showAnimate()
         
     }
-    
+   
     @IBAction func CloseAddTask(_ sender: Any) {
-        //self.view.removeFromSuperview()
-        self.removeAnimate()
+      //self.view.removeFromSuperview()
+      self.removeAnimate()
     }
     
-    func showAnimate()
+   @IBAction func SaveAddTask(_ sender: Any) {
+      self.storeNewTask()
+      self.removeAnimate()
+   }
+   
+   func storeNewTask(){
+      let new_task = Task(TaskText: taskText.text!, dueDate: NSDate())
+      // previousVC.tasks.append(new_task)
+      // previousVC.tableView.reloadData()
+   }
+   
+   
+   func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0;

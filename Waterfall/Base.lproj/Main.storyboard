@@ -83,7 +83,7 @@
                                 <rect key="frame" x="0.0" y="308" width="375" height="196"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Task" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-9c-yCf">
-                                        <rect key="frame" x="78" y="31" width="218" height="111"/>
+                                        <rect key="frame" x="61.666666666666515" y="31" width="250" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,6 +94,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="SaveAddTask:" destination="GTB-8H-3o8" eventType="touchUpInside" id="hdh-ig-mCN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzr-3F-tCS">
                                         <rect key="frame" x="56" y="153" width="53" height="33"/>
@@ -103,9 +106,16 @@
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="CloseAddTask:" destination="GTB-8H-3o8" eventType="touchUpInside" id="XLQ-DV-SEe"/>
+                                            <action selector="CloseAddTask:" destination="GTB-8H-3o8" eventType="touchUpInside" id="6cv-nF-rI7"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Due Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-QZ-Ekd">
+                                        <rect key="frame" x="61" y="83" width="250" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -121,6 +131,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CHd-q2-2TA"/>
                     </view>
+                    <connections>
+                        <outlet property="dueDate" destination="EI3-QZ-Ekd" id="2Fb-ab-ZjV"/>
+                        <outlet property="dueDateText" destination="EI3-QZ-Ekd" id="T3n-kn-2bI"/>
+                        <outlet property="taskText" destination="c0Z-9c-yCf" id="bRl-eE-xia"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWv-pY-85V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
