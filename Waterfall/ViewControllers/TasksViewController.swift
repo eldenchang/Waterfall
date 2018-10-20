@@ -17,10 +17,13 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
         // Do any additional setup after loading the view.
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
@@ -30,10 +33,14 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         
         let task = tasks[indexPath.row]
-        
+        var taskFontSize = 20.0; // var for font size of the task text
         cell.taskLabel.text = task;
+        cell.taskLabel.font = UIFont(name:"AppleSDGothicNeo-Medium", size: CGFloat(taskFontSize));
+        //self.myTableView.separatorColor = [UIColor clearColor];
+        //self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         return cell;
     }
+    
     
     
  
