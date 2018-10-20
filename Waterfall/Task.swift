@@ -11,7 +11,7 @@ import UIKit
 //import MongoSwift
 //import stitch-sdk
 
-class Task{
-    
-    
+struct Task{
+   let TaskText : String
+   let dueDate : NSDate
 }
