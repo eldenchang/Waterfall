@@ -1,0 +1,34 @@
+PODS:
+  - MongoSwiftMobile (4.0.0)
+  - StitchCore (4.0.0):
+    - StitchCoreSDK (~> 4.0.0)
+  - StitchCoreLocalMongoDBService (4.0.2):
+    - StitchCoreSDK (<= 4.0.0)
+  - StitchCoreSDK (4.0.0):
+    - MongoSwiftMobile (~> 4.0.0)
+  - StitchLocalMongoDBService (4.0.0):
+    - StitchCore (~> 4.0.0)
+    - StitchCoreLocalMongoDBService (~> 4.0.0)
+
+DEPENDENCIES:
+  - StitchCore
+  - StitchLocalMongoDBService
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MongoSwiftMobile
+    - StitchCore
+    - StitchCoreLocalMongoDBService
+    - StitchCoreSDK
+    - StitchLocalMongoDBService
+
+SPEC CHECKSUMS:
+  MongoSwiftMobile: 6a2cf9f5e27f9be7fb0eeb3440765ba32d236c2f
+  StitchCore: 55514801894888f2c2daaa12d7176c1d2637722b
+  StitchCoreLocalMongoDBService: de0669d614cebfd67501cae7d525a46774aa697d
+  StitchCoreSDK: 1632259c0f561dd68aeaaf656424834fd931c13c
+  StitchLocalMongoDBService: a1867cea97383f33bb01c6a9198c94bc4bc4daa1
+
+PODFILE CHECKSUM: 24964f8360e2554d8df1155fcdc5f85600733504
+
+COCOAPODS: 1.5.3
