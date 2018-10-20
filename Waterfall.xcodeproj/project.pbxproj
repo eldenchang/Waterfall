@@ -152,7 +152,6 @@
 				D4142451217AD7A600DACFF3 /* Assets.xcassets */,
 				D4142453217AD7A600DACFF3 /* LaunchScreen.storyboard */,
 				D4142456217AD7A600DACFF3 /* Info.plist */,
-				90FD3310217B82E0002EF13A /* Task.swift */,
 			);
 			path = Waterfall;
 			sourceTree = "<group>";
@@ -178,6 +177,7 @@
 		D4142478217ADA3600DACFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90FD3310217B82E0002EF13A /* Task.swift */,
 				90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */,
 				D4142479217ADAD400DACFF3 /* TaskCell.swift */,
 				D414247D217ADB5100DACFF3 /* TasksViewController.swift */,
