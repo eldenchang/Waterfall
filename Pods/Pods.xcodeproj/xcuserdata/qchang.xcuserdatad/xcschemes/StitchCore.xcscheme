@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A09FDBDE03180D584A187C58F70E43E5"
+               BlueprintIdentifier = "4BDFCC5EC472C06837E0D6EC029E28E2"
                BlueprintName = "StitchCore"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "StitchCore.framework">

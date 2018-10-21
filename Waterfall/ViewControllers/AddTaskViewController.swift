@@ -34,8 +34,10 @@ class AddTaskViewController: UIViewController {
    }
    
    func storeNewTask(){
-      let new_task = Task(TaskText: taskText.text!, /*dueDate: NSDate()*/)
-      // previousVC.tasks.append(new_task)
+      //let new_task = Task(TaskText: taskText.text!/*dueDate: NSDate()*/)
+    let new_task = Task(TaskText: taskText.text!/*dueDate: NSDate()*/)
+
+    // previousVC.tasks.append(new_task)
       // previousVC.tableView.reloadData()
    }
    

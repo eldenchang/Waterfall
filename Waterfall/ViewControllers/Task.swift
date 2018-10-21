@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MongoSwiftMobile
-//import MongoSwift
-//import stitch-sdk
+import StitchCore
+
 
 struct Task : Equatable{
     

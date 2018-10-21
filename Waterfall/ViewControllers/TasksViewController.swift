@@ -7,6 +7,11 @@
 //
 
 import UIKit
+//import FacebookLogin
+//import FacebookCore
+import StitchCore
+//import StitchRemoteMongoDBService
+//import StitchLocalMongoDBService
 
 class TasksViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
@@ -14,7 +19,16 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
 //   let t1 = Task(TaskText: "Eggs", dueDate: NSDate())
 //   let t2 = Task(TaskText: "Pizza", dueDate: NSDate())
-    var tasks : [Task] = [Task(TaskText: "Eggs", dueDate: NSDate())] // Example tasks
+    //var tasks : [Task] = [Task(TaskText: "Eggs", dueDate: NSDate())] // Example tasks
+    private var tasks : [Task] = []
+    
+    var collection: RemoteMongoCollection<Document> {
+        return mongoClient!.db("task").collection("items")
+    }
+    required init?(coder aDecoder: NSCoder) {
+        mongoClient = nil;
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +38,38 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         // Do any additional setup after loading the view.
+        
+        //Mark: Stitch init
+        do {
+            try Stitch.initialize()
+            
+            _ = try Stitch.initializeDefaultAppClient(withConfigBuilder:
+                StitchAppClientConfigurationBuilder.forApp(withClientAppID: Consts.AppId)
+            )
+        } catch {
+            print("Failed to initialize MongoDB Stitch iOS SDK: \(error.localizedDescription)")
+            // note: This initialization will only fail if an incomplete configuration is
+            // passed to a client initialization method, or if a client for a particular
+            // app ID is initialized multiple times. See the documentation of the "Stitch"
+            // class for more details.
+        }
+        
+        self.stitchClient = Stitch.defaultAppClient
+        mongoClient = stitchClient.serviceClient(fromFactory: remoteMongoDBServiceClientFactory, withName: "mongodb-atlas")
+        todoItemsTableView.tableFooterView = UIView(frame: .zero)
+        
+        if !stitchClient.auth.isLoggedIn {
+            presentAuthViewController(animated: false)
+        }
+        else {
+            refreshList()
+        }
+        
+        if let emailAuthOpToPresentWhenOpened = emailAuthOpToPresentWhenOpened {
+            presentEmailAuthViewController(operationType: emailAuthOpToPresentWhenOpened)
+        }
+        
+        
     }
     
     
