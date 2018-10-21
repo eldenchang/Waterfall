@@ -28,7 +28,7 @@
                                         <navigationItem title="My Tasks:" id="cf6-wc-iwT">
                                             <barButtonItem key="rightBarButtonItem" systemItem="add" id="i20-Ct-kdC">
                                                 <connections>
-                                                    <action selector="showAddTask:" destination="BYZ-38-t0r" id="rS4-I6-Jrr"/>
+                                                    <action selector="showAddTask:" destination="BYZ-38-t0r" id="FbC-ia-x8U"/>
                                                 </connections>
                                             </barButtonItem>
                                         </navigationItem>
@@ -109,13 +109,6 @@
                                             <action selector="CloseAddTask:" destination="GTB-8H-3o8" eventType="touchUpInside" id="6cv-nF-rI7"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Due Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-QZ-Ekd">
-                                        <rect key="frame" x="61" y="83" width="250" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -132,8 +125,6 @@
                         <viewLayoutGuide key="safeArea" id="CHd-q2-2TA"/>
                     </view>
                     <connections>
-                        <outlet property="dueDate" destination="EI3-QZ-Ekd" id="2Fb-ab-ZjV"/>
-                        <outlet property="dueDateText" destination="EI3-QZ-Ekd" id="T3n-kn-2bI"/>
                         <outlet property="taskText" destination="c0Z-9c-yCf" id="bRl-eE-xia"/>
                     </connections>
                 </viewController>

@@ -9,10 +9,7 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
    
-   // var previousVC = TasksViewController()
-   
    @IBOutlet weak var taskText: UITextField!
-   @IBOutlet weak var dueDateText: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +32,6 @@ class AddTaskViewController: UIViewController {
    
    func storeNewTask(){
       let new_task = Task(TaskText: taskText.text!, dueDate: NSDate())
-      // previousVC.tasks.append(new_task)
-      // previousVC.tableView.reloadData()
    }
    
    

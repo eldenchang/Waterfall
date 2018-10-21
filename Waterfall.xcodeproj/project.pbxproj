@@ -13,7 +13,6 @@
 		90FD330F217B6CCB002EF13A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */; };
 		90FD3311217B82E0002EF13A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD3310217B82E0002EF13A /* Task.swift */; };
 		90FD3313217BB7C0002EF13A /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD3312217BB7C0002EF13A /* Package.swift */; };
-		C7F3DB65217C16DC000C1488 /* PostDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3DB64217C16DC000C1488 /* PostDB.swift */; };
 		D414244B217AD7A400DACFF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414244A217AD7A400DACFF3 /* AppDelegate.swift */; };
 		D4142450217AD7A400DACFF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D414244E217AD7A400DACFF3 /* Main.storyboard */; };
 		D4142452217AD7A600DACFF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4142451217AD7A600DACFF3 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		90FD3312217BB7C0002EF13A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		922981727C09AA2599FAB9D7 /* Pods-WaterfallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterfallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterfallTests/Pods-WaterfallTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEB39D6DFB42A8A7B81E0C8 /* Pods-WaterfallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterfallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterfallUITests/Pods-WaterfallUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C7F3DB64217C16DC000C1488 /* PostDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostDB.swift; path = /Users/cheyenne/Documents/Coding/Boilermake6/Waterfall/Waterfall/ViewControllers/PostDB.swift; sourceTree = "<absolute>"; };
 		CAA67EC918E2155B244F3A9E /* Pods_WaterfallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterfallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4142447217AD7A400DACFF3 /* Waterfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waterfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414244A217AD7A400DACFF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				D4142478217ADA3600DACFF3 /* ViewControllers */,
 				D414244A217AD7A400DACFF3 /* AppDelegate.swift */,
-				C7F3DB64217C16DC000C1488 /* PostDB.swift */,
 				D414244E217AD7A400DACFF3 /* Main.storyboard */,
 				90FD3312217BB7C0002EF13A /* Package.swift */,
 				D4142451217AD7A600DACFF3 /* Assets.xcassets */,
@@ -1165,7 +1162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F3DB65217C16DC000C1488 /* PostDB.swift in Sources */,
 				90FD3313217BB7C0002EF13A /* Package.swift in Sources */,
 				D414247E217ADB5100DACFF3 /* TasksViewController.swift in Sources */,
 				90FD330F217B6CCB002EF13A /* AddTaskViewController.swift in Sources */,
