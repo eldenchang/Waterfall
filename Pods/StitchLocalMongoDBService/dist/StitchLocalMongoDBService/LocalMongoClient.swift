@@ -61,21 +61,33 @@ private final class MobileMongoDBClientFactory: CoreLocalMongoDBService, Throwin
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(batteryLevelDidChange(_:)),
+<<<<<<< HEAD
             name: UIDevice.batteryLevelDidChangeNotification,
+=======
+            name: .UIDeviceBatteryLevelDidChange,
+>>>>>>> origin
             object: nil
         )
         // observe when memory warnings are received
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(didReceiveMemoryWarning(_:)),
+<<<<<<< HEAD
             name: UIApplication.didReceiveMemoryWarningNotification,
+=======
+            name: .UIApplicationDidReceiveMemoryWarning,
+>>>>>>> origin
             object: nil
         )
         // observe when application will terminate
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(applicationWillTerminate(_:)),
+<<<<<<< HEAD
             name: UIApplication.willTerminateNotification,
+=======
+            name: .UIApplicationWillTerminate,
+>>>>>>> origin
             object: nil
         )
         #endif

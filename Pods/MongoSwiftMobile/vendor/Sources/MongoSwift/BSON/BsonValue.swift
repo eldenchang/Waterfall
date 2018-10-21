@@ -463,7 +463,11 @@ public struct CodeWithScope: BsonValue, Equatable, Codable {
 
         var length: UInt32 = 0
 
+<<<<<<< HEAD
         if iter.currentType.rawValue == BSON_BYTE_ORDER.hashValue {
+=======
+        if iter.currentType.rawValue == BSON_TYPE_CODE.rawValue {
+>>>>>>> origin
             let code = String(cString: bson_iter_code(&iter.iter, &length))
             self.init(code: code)
             return

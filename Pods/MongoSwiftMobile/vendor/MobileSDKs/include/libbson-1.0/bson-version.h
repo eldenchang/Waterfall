@@ -60,7 +60,11 @@
  *
  * BSON version.
  */
+<<<<<<< HEAD
 //#define BSON_VERSION (1.10.1)
+=======
+#define BSON_VERSION (1.10.1)
+>>>>>>> origin
 
 
 /**
