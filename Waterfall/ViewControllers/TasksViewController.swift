@@ -11,7 +11,9 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
    
    
    @IBOutlet weak var tableView: UITableView!
-   var tasks = ["Do Laundry", "Pick up fruits", "Study for exam"] // Example tasks
+   //var tasks = ["Do Laundry", "Pick up fruits", "Study for exam"] // Example tasks
+    var tasks: [Task] = []
+    
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -33,7 +35,7 @@ class TasksViewController: UIViewController,UITableViewDelegate, UITableViewData
       
       let task = tasks[indexPath.row]
       var taskFontSize = 20.0; // var for font size of the task text
-      cell.taskLabel.text = task;
+      cell.taskLabel.text = task.TaskText;
       cell.taskLabel.font = UIFont(name:"AppleSDGothicNeo-Medium", size: CGFloat(taskFontSize));
       //self.myTableView.separatorColor = [UIColor clearColor];
       //self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;

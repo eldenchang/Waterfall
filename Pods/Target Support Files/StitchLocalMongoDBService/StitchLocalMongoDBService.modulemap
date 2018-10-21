@@ -1,6 +1,0 @@
-framework module StitchLocalMongoDBService {
-  umbrella header "StitchLocalMongoDBService-umbrella.h"
-
-  export *
-  module * { export * }
-}

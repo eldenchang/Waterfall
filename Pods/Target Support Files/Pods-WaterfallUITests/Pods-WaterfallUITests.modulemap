@@ -1,6 +1,0 @@
-framework module Pods_WaterfallUITests {
-  umbrella header "Pods-WaterfallUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
