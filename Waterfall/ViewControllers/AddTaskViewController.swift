@@ -7,35 +7,54 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
-   
-   @IBOutlet weak var taskText: UITextField!
-
+class AddTaskViewController: UIViewController, UITextViewDelegate {
+    
+    //@IBOutlet weak var taskText: UITextField!
+    @IBOutlet weak var gettext: UITextView!
+    
+    
+    //@IBOutlet weak var getTaskText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.showAnimate()
+        gettext.delegate = self
+        gettext.isEditable = true
+        gettext.text = "Add new task"
+        gettext.textColor = UIColor.lightGray
         
     }
-   
+    
+    
+    
     @IBAction func CloseAddTask(_ sender: Any) {
-      //self.view.removeFromSuperview()
-      self.removeAnimate()
+        //self.view.removeFromSuperview()
+        self.removeAnimate()
     }
     
-   @IBAction func SaveAddTask(_ sender: Any) {
-      self.storeNewTask()
-      self.removeAnimate()
-   }
-   
-   func storeNewTask(){
-      let new_task = Task(TaskText: taskText.text!, dueDate: NSDate())
-   }
-   
-   
-   func showAnimate()
+    @IBAction func SaveAddTask(_ sender: Any) {
+        self.storeNewTask()
+        self.removeAnimate()
+        print(tasks[5].TaskText)
+//        TasksViewController.tableView.reloadData()
+//        TasksViewController.refresher.endRefreshing()
+    }
+    
+    func storeNewTask(){
+        let new_task = Task(TaskText: gettext.text!, Importance: 2)!
+        tasks.append(new_task)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if gettext.textColor == UIColor.lightGray {
+            gettext.text = nil
+            gettext.textColor = UIColor.black
+        }
+    }
+    
+    func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0;
@@ -59,13 +78,13 @@ class AddTaskViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
