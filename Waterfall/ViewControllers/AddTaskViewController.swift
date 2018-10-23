@@ -35,18 +35,18 @@ class AddTaskViewController: UIViewController, UITextViewDelegate {
         gettext.text = "Add new task"
         gettext.textColor = UIColor.lightGray
         
+        //Listener of when will the keyboard show up
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        popUpWindowButtomConstraint = NSLayoutConstraint(item: popUpWindow, attribute: .bottom, relatedBy: .equal, toItem: screenView, attribute: .bottom, multiplier: 1, constant: -100)
+        popUpWindowButtomConstraint = NSLayoutConstraint(item: popUpWindow, attribute: .bottom, relatedBy: .equal, toItem: screenView, attribute: .bottom, multiplier: 1, constant: -(self.view.frame.size.height - 196) / 2)
+        screenView.addConstraint(popUpWindowButtomConstraint!)
         
     }
     
     @objc func handleKeyboardNotification(notification: NSNotification){
         if let userInfo = notification.userInfo {
             let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
-            
             popUpWindowButtomConstraint?.constant = -keyboardFrame!.height
-            print(keyboardFrame)
         }
     }
     
