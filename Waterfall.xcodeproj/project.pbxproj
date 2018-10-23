@@ -137,10 +137,10 @@
 		D4142478217ADA3600DACFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */,
+				9083AA7F217C3CA80013DA1F /* Task.swift */,
 				D4142479217ADAD400DACFF3 /* TaskCell.swift */,
 				D414247D217ADB5100DACFF3 /* TasksViewController.swift */,
-				9083AA7F217C3CA80013DA1F /* Task.swift */,
+				90FD330E217B6CCB002EF13A /* AddTaskViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -459,13 +459,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KV6KA8C2X;
+				DEVELOPMENT_TEAM = GT4CFG64J7;
 				INFOPLIST_FILE = Waterfall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = boilermake6.Waterfall;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Waterfall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Waterfall/Waterfall-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -480,13 +480,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KV6KA8C2X;
+				DEVELOPMENT_TEAM = GT4CFG64J7;
 				INFOPLIST_FILE = Waterfall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = boilermake6.Waterfall;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Waterfall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Waterfall/Waterfall-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

@@ -7,12 +7,22 @@
 
 import UIKit
 
+protocol addTaskDelegate {
+    func didTapAdd()
+}
+
 class AddTaskViewController: UIViewController, UITextViewDelegate {
+    
+    //adding delegate for adding task
+    var addingDelegate : addTaskDelegate!
     
     //@IBOutlet weak var taskText: UITextField!
     @IBOutlet weak var gettext: UITextView!
+    @IBOutlet weak var popUpWindow: UIView!
+    @IBOutlet var screenView: UIView!
     
     
+    var popUpWindowButtomConstraint : NSLayoutConstraint?
     //@IBOutlet weak var getTaskText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +35,28 @@ class AddTaskViewController: UIViewController, UITextViewDelegate {
         gettext.text = "Add new task"
         gettext.textColor = UIColor.lightGray
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        popUpWindowButtomConstraint = NSLayoutConstraint(item: popUpWindow, attribute: .bottom, relatedBy: .equal, toItem: screenView, attribute: .bottom, multiplier: 1, constant: -100)
+        
     }
     
+    @objc func handleKeyboardNotification(notification: NSNotification){
+        if let userInfo = notification.userInfo {
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+            
+            popUpWindowButtomConstraint?.constant = -keyboardFrame!.height
+            print(keyboardFrame)
+        }
+    }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if gettext.textColor == UIColor.lightGray {
+            gettext.text = nil
+            gettext.textColor = UIColor.black
+        }
+        self.gettext.becomeFirstResponder()
+    }
     
     @IBAction func CloseAddTask(_ sender: Any) {
         //self.view.removeFromSuperview()
@@ -37,9 +66,7 @@ class AddTaskViewController: UIViewController, UITextViewDelegate {
     @IBAction func SaveAddTask(_ sender: Any) {
         self.storeNewTask()
         self.removeAnimate()
-        print(tasks[5].TaskText)
-//        TasksViewController.tableView.reloadData()
-//        TasksViewController.refresher.endRefreshing()
+        addingDelegate.didTapAdd()
     }
     
     func storeNewTask(){
@@ -47,12 +74,7 @@ class AddTaskViewController: UIViewController, UITextViewDelegate {
         tasks.append(new_task)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if gettext.textColor == UIColor.lightGray {
-            gettext.text = nil
-            gettext.textColor = UIColor.black
-        }
-    }
+    
     
     func showAnimate()
     {
